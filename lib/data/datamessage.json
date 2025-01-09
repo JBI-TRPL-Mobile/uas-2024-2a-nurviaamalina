@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "message": "Welcome to the App!",
+        "time": "09.52 AM"
+    },
+
+    {
+        "welcomeMessage": "Welcome Back!",
+        "emailPlaceholder": "Enter your email",
+        "passwordPlaceholder": "Enter your password",
+        "signInButton": "Sign In",
+        "forgotPassword": "Forgot Password",
+        "noAcoount": "Don't have an account?",
+        "signUpnow": "Sign Up Now"
+    }
+]
