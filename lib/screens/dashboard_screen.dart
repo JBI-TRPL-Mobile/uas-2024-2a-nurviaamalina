@@ -18,16 +18,17 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 62, 28, 28),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 62, 28, 28),
         elevation: 0,
         title: const Text(
           "Welcome William",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.notifications, color: Colors.black),
+            icon: const Icon(Icons.notifications, color: Color.fromARGB(255, 255, 255, 255)),
             onPressed: () {},
           ),
         ],
@@ -42,13 +43,13 @@ class DashboardScreen extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 150,
-                color: Colors.grey[300],
+                color: const Color.fromARGB(255, 210, 173, 161),
               ),
               const SizedBox(height: 16),
-              // Keep Moving Up Section
+              // Keep Moving Up Section (Warna teks putih)
               const Text(
                 "Keep Moving Up",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               const SizedBox(height: 8),
               const Text(
@@ -56,26 +57,29 @@ class DashboardScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 16),
-              // Categories Section
+              // Categories Section (Warna teks putih)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     "Categories",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                   Container(
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.black, // Warna border
-          width: 2.0, // Ketebalan border
-        ),
-        borderRadius: BorderRadius.circular(8.0), // Mengatur radius border untuk sudut melengkung
-      ), 
-      child :TextButton(
-                    onPressed: () {},
-                    child: const Text("See All"),
-                  ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromARGB(255, 255, 252, 252), // Warna border
+                        width: 2.0, // Ketebalan border
+                      ),
+                      borderRadius: BorderRadius.circular(8.0), // Mengatur radius border untuk sudut melengkung
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "See All",
+                        style: TextStyle(color: Colors.white), // Mengubah warna teks menjadi putih
+                      ),
+                    ),
                   ),
                 ]
               ),
@@ -93,10 +97,10 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              // Top Courses Section
+              // Top Courses Section (Warna teks putih)
               const Text(
                 "Top Courses",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               const SizedBox(height: 8),
               Row(
@@ -105,7 +109,7 @@ class DashboardScreen extends StatelessWidget {
                   return Container(
                     width: 80,
                     height: 100,
-                    color: Colors.grey[300],
+                    color: const Color.fromARGB(255, 210, 173, 161),
                   );
                 }),
               ),
@@ -114,34 +118,36 @@ class DashboardScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromRGBO(33, 150, 243, 1),
-  selectedItemColor: Colors.grey, 
-  unselectedItemColor: Colors.blue, 
+        backgroundColor: const Color.fromARGB(255, 62, 28, 28),
+        selectedItemColor: Colors.grey,
+        unselectedItemColor: const Color.fromARGB(255, 62, 28, 28),
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home, color: Color.fromARGB(255, 62, 28, 28)),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
+            icon: Icon(Icons.message, color: Color.fromARGB(255, 62, 28, 28)),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.book, color: Color.fromARGB(255, 62, 28, 28)),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person, color: Color.fromARGB(255, 62, 28, 28)),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.search, color: Color.fromARGB(255, 62, 28, 28)),
             label: "",
           ),
+          
         ],
       ),
     );
   }
+  
 }
 
 class CategoryButton extends StatelessWidget {
@@ -153,14 +159,20 @@ class CategoryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.grey[200],
-        foregroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 210, 173, 161),
+        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
       ),
       onPressed: () {},
-      child: Text(title),
+      child: Text(
+        title,
+        style: const TextStyle(color: Colors.black), // Mengubah warna teks menjadi hitam
+      ),
     );
+    
   }
+
+  
 }

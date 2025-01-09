@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_project/screens/dashboard_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -39,52 +40,65 @@ class SignUpScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 labelText: "Enter Name",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-                prefixIcon: const Icon(Icons.person, color: Color.fromARGB(255, 248, 248, 248)),
+                labelStyle:
+                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                prefixIcon: const Icon(Icons.person,
+                    color: Color.fromARGB(255, 248, 248, 248)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
               ),
             ),
             const SizedBox(height: 16),
-           
+
             TextField(
               decoration: InputDecoration(
                 labelText: "Enter Email",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-                prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 255, 255, 255)),
+                labelStyle:
+                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                prefixIcon: const Icon(Icons.email,
+                    color: Color.fromARGB(255, 255, 255, 255)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
               ),
             ),
             const SizedBox(height: 16),
-            
+
             // Password Field
             TextField(
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "Password",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-                prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 255, 255, 255)),
-                suffixIcon: const Icon(Icons.visibility_off, color: Color.fromARGB(255, 255, 255, 255)),
+                labelStyle:
+                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                prefixIcon: const Icon(Icons.lock,
+                    color: Color.fromARGB(255, 255, 255, 255)),
+                suffixIcon: const Icon(Icons.visibility_off,
+                    color: Color.fromARGB(255, 255, 255, 255)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
               ),
             ),
@@ -94,16 +108,21 @@ class SignUpScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "Confirm Password",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-                prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 255, 255, 255)),
-                suffixIcon: const Icon(Icons.visibility_off, color: Color.fromARGB(255, 255, 255, 255)),
+                labelStyle:
+                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                prefixIcon: const Icon(Icons.lock,
+                    color: Color.fromARGB(255, 255, 255, 255)),
+                suffixIcon: const Icon(Icons.visibility_off,
+                    color: Color.fromARGB(255, 255, 255, 255)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
               ),
             ),
@@ -112,11 +131,18 @@ class SignUpScreen extends StatelessWidget {
             // Sign Up Button
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DashboardScreen()),
+                );
                 // Handle sign-up action
               },
               child: const Text("Sign Up"),
               style: ElevatedButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 0, 0, 0), backgroundColor: const Color.fromARGB(255, 210, 173, 161), padding: const EdgeInsets.symmetric(vertical: 12), // Warna teks tombol
+                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                backgroundColor: const Color.fromARGB(255, 210, 173, 161),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 12), // Warna teks tombol
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -130,7 +156,10 @@ class SignUpScreen extends StatelessWidget {
                 Expanded(child: Divider(thickness: 1)),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text("or sign up with"),
+                  child: Text(
+                    "or sign up with",
+                    style: TextStyle(color: Colors.white), // Warna putih untuk teks
+                  ),
                 ),
                 Expanded(child: Divider(thickness: 1)),
               ],
@@ -153,25 +182,29 @@ class SignUpScreen extends StatelessWidget {
                   onPressed: () {
                     // Handle Facebook sign-up
                   },
-                  icon: const Icon(Icons.facebook, color: Color.fromARGB(255, 56, 131, 193)),
+                  icon: const Icon(Icons.facebook,
+                      color: Color.fromARGB(255, 56, 131, 193)),
                   iconSize: 36,
                 ),
               ],
             ),
             const SizedBox(height: 32),
 
-            // Sign In Option
+             // Sign Up Option
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Already have an account?"),
+                const Text(
+                  "Already have an account?",
+                  style: TextStyle(color: Colors.white), // Warna putih untuk teks
+                ),
                 TextButton(
                   onPressed: () {
                     // Navigate to Sign In screen
                   },
                   child: const Text(
                     "Sign In Now",
-                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                    style: TextStyle(color: Colors.white), // Warna putih untuk teks tombol
                   ),
                 ),
               ],

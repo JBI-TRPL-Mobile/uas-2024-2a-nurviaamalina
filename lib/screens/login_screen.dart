@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_project/screens/dashboard_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -6,7 +7,8 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 62, 28, 28), // Warna latar belakang halaman
+      backgroundColor:
+          const Color.fromARGB(255, 62, 28, 28), // Warna latar belakang halaman
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -35,20 +37,27 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-           
+
             // Email Field
             TextField(
               decoration: InputDecoration(
                 labelText: "Enter Email",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)), // Warna label
-                prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 255, 255, 255)),
+                labelStyle: TextStyle(
+                    color: const Color.fromARGB(
+                        255, 255, 255, 255)), // Warna label
+                prefixIcon: const Icon(Icons.email,
+                    color: Color.fromARGB(255, 255, 255, 255)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 245, 250, 255)), // Warna border
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(
+                          255, 245, 250, 255)), // Warna border
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)), // Warna border saat focus
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(
+                          255, 255, 255, 255)), // Warna border saat focus
                 ),
               ),
             ),
@@ -58,16 +67,24 @@ class SignInScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "Password",
-                labelStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)), // Warna label
-                prefixIcon: const Icon(Icons.lock, color: Color.fromARGB(255, 255, 255, 255)),
-                suffixIcon: const Icon(Icons.visibility_off, color: Color.fromARGB(255, 255, 255, 255)),
+                labelStyle: TextStyle(
+                    color: const Color.fromARGB(
+                        255, 255, 255, 255)), // Warna label
+                prefixIcon: const Icon(Icons.lock,
+                    color: Color.fromARGB(255, 255, 255, 255)),
+                suffixIcon: const Icon(Icons.visibility_off,
+                    color: Color.fromARGB(255, 255, 255, 255)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)), // Warna border
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(
+                          255, 255, 255, 255)), // Warna border
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)), // Warna border saat focus
+                  borderSide: BorderSide(
+                      color: const Color.fromARGB(
+                          255, 255, 255, 255)), // Warna border saat focus
                 ),
               ),
             ),
@@ -83,7 +100,9 @@ class SignInScreen extends StatelessWidget {
                   },
                   child: const Text(
                     "Forget Password?",
-                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)), // Warna teks tombol
+                    style: TextStyle(
+                        color: Color.fromARGB(
+                            255, 255, 255, 255)), // Warna teks tombol
                   ),
                 ),
               ],
@@ -92,13 +111,20 @@ class SignInScreen extends StatelessWidget {
             // Sign In Button
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DashboardScreen()),
+                );
+
                 // Handle sign-in action
               },
               child: const Text("Sign In"),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 12),
-                backgroundColor: const Color.fromARGB(255, 210, 173, 161),  // Warna latar belakang tombol
-                foregroundColor: const Color.fromARGB(255, 3, 3, 3),  // Warna teks tombol
+                backgroundColor: const Color.fromARGB(
+                    255, 210, 173, 161), // Warna latar belakang tombol
+                foregroundColor:
+                    const Color.fromARGB(255, 3, 3, 3), // Warna teks tombol
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -112,7 +138,10 @@ class SignInScreen extends StatelessWidget {
                 Expanded(child: Divider(thickness: 1)),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text("or sign in with"),
+                  child: Text(
+                    "or sign in with",
+                    style: TextStyle(color: Colors.white), // Warna putih untuk teks
+                  ),
                 ),
                 Expanded(child: Divider(thickness: 1)),
               ],
@@ -146,14 +175,18 @@ class SignInScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Don't have an account?"),
+                const Text(
+                  "Don't have an account?",
+                  style: TextStyle(color: Colors.white), // Warna putih untuk teks
+                ),
                 TextButton(
                   onPressed: () {
                     // Navigate to Sign Up screen
                   },
                   child: const Text(
                     "Sign Up Now",
-                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)), // Warna teks tombol
+                    style: TextStyle(
+                        color: Colors.white), // Warna putih untuk teks tombol
                   ),
                 ),
               ],
