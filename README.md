@@ -10,5 +10,8 @@ KELAS: 2A TRPL
 -
 ![image](https://github.com/user-attachments/assets/1addab5b-c71f-4669-af0d-728cf6ea7e32)
 -
+![image](https://github.com/user-attachments/assets/6bcfb0d9-71fd-42f1-b77d-89d3ac36863d)
+-
+
 
 
